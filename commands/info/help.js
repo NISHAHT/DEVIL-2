@@ -18,7 +18,7 @@ module.exports = {
         .setTitle("🔰 **Help Menu** 🔰")
         .setImage(message.author.avatarURL)
         .setColor('03fcba')
-        .setDescription(`**\`❗My Prefix is ${config.prefix}\n\nI am Coded by 1NS4N1TY#9920\`\n\n [🔴 Invite Me Now](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)**\n\n **Main Commands**`).setThumbnail(client.user.displayAvatarURL()).setImage('https://media.discordapp.net/attachments/898836033909714947/899503536453333012/standard.gif').setTimestamp()
+        .setDescription(`**\`❗My Prefix is ${config.prefix}\n\nI am Coded by WHITE DEVIL </>#5308\`\n\n [🔴 Invite Me Now](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)**\n\n **Main Commands**`).setThumbnail(client.user.displayAvatarURL()).setImage('https://media.discordapp.net/attachments/898836033909714947/899503536453333012/standard.gif').setTimestamp()
         .addField('`help`', 'Shows the help menu')
         .addField('`ping`', 'Shows the ping of the bot')
         .addField('`embedbuilder`', 'Help you build an embed very fast')
