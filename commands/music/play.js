@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const client = require("../../index.js");
 const player = require('../../index.js');
 const DMP = require("discord-music-player");
+const role = require('../../settings/config.json');
 
 module.exports = {
     name: "play",
@@ -15,6 +16,25 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
+        
+        //? If no role name was added
+        if(role.djrole == "")
+        {
+            //! Add react message
+            await message.react("❌");
+            //! Return message error
+            return message.channel.send(`:x: Please add a role name in the file \`config.json\` :x:`)
+        }
+
+        //? if the user does not have the dj role
+        if(!message.member.roles.cache.some(role => role.name === role.djrole))
+        {
+            //! Add react message
+            await message.react("❌");
+            //! Return message error
+            return message.channel.send(`:x: Sorry you don't own the role **${role.djrole}**. :x:`)
+        }
+        
         await message.react("✅");
         let guildQueue = client.player.getQueue(message.guild.id);
         let queue = client.player.createQueue(message.guild.id);
